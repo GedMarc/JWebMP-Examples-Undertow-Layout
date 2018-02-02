@@ -9,6 +9,7 @@ import za.co.mmagon.guiceinjection.GuiceContext;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.base.ajax.AjaxCall;
 import za.co.mmagon.jwebswing.base.ajax.AjaxResponse;
+import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
 import za.co.mmagon.jwebswing.examples.undertow.layout.outerlayout.OuterScreen;
 import za.co.mmagon.logger.LogFactory;
 import za.co.mmagon.logger.handlers.ConsoleSTDOutputHandler;
@@ -26,6 +27,7 @@ public class LayoutDemo extends Page
 	{
 		super("Layout Demo 1.6");
 		OuterScreen screen = new OuterScreen(getBody());
+		AngularPageConfigurator.setRequired(true);
 	}
 
 	/**
