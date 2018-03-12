@@ -41,11 +41,19 @@
             <artifactId>jwebswing</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-jquery-ui-themes</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing-jquery-ui-layout</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing-undertow</artifactId>

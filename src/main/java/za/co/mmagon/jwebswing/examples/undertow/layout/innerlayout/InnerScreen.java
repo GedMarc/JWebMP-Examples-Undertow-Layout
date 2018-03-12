@@ -2,8 +2,11 @@ package za.co.mmagon.jwebswing.examples.undertow.layout.innerlayout;
 
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.plugins.jquerylayout.layout.BorderLayout;
+import za.co.mmagon.jwebswing.plugins.jqueryui.tabs.JQUITabContent;
+import za.co.mmagon.jwebswing.plugins.jqueryui.tabs.JQUITabs;
 
-public class InnerScreen extends BorderLayout
+public class InnerScreen
+		extends BorderLayout
 {
 	/**
 	 * Sets a component as a border layout container
@@ -20,7 +23,7 @@ public class InnerScreen extends BorderLayout
 		getNorth().addHeader("Inner North Header 2");
 		getNorth().addHeader("Inner North Header 3");
 		getNorth().getContentDiv()
-				.add("North Content Div");
+		          .add("North Content Div");
 		getNorth().addFooter("Inner North Footer 1");
 		getNorth().addFooter("Inner North Footer 2");
 		getNorth().addFooter("Inner North Footer 3");
@@ -32,21 +35,32 @@ public class InnerScreen extends BorderLayout
 		getEast().addFooter("Inner East Footer 2");
 		getEast().addFooter("Inner East Footer 3");
 
-		getWest().addHeader("Inner West Header 1");
-		getWest().addHeader("Inner West Header 2");
-		getWest().addHeader("Inner West Header 3");
-		getWest().addFooter("Inner West Footer 1");
-		getWest().addFooter("Inner West Footer 2");
-		getWest().addFooter("Inner West Footer 3");
+
+		getWest().addHeader("Layout JQUI Tabs Demo");
 
 		getSouth().addHeader("Inner South Header 1");
-		getSouth().addHeader("Inner South Header 2");
+		/*getSouth().addHeader("Inner South Header 2");
 		getSouth().addHeader("Inner South Header 3");
 		getSouth().addFooter("Inner South Footer 1");
 		getSouth().addFooter("Inner South Footer 2");
-		getSouth().addFooter("Inner South Footer 3");
+		getSouth().addFooter("Inner South Footer 3");*/
+
+		addTabsDemo();
 
 	}
 
+	private void addTabsDemo()
+	{
+		JQUITabs<?> tabs = new JQUITabs<>();
+		tabs.setID("tabsDemo");
+		tabs.asMe()
+		    .addTab("Tab 1", new JQUITabContent());
+		tabs.asMe()
+		    .addTab("Tab 2", new JQUITabContent());
+		tabs.asMe()
+		    .addTab("Tab 3", new JQUITabContent());
+		getSouth().getContentDiv()
+		          .add(tabs);
+	}
 
 }
