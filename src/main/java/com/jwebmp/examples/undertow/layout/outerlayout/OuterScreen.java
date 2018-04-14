@@ -1,9 +1,9 @@
-package za.co.mmagon.jwebswing.examples.undertow.layout.outerlayout;
+package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.examples.undertow.layout.innerlayout.InnerScreen;
-import za.co.mmagon.jwebswing.plugins.jquerylayout.layout.BorderLayout;
+import com.jwebmp.base.ComponentHierarchyBase;
+import com.jwebmp.base.html.Div;
+import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
+import com.jwebmp.plugins.jquerylayout.layout.BorderLayout;
 
 @SuppressWarnings("unchecked")
 public class OuterScreen extends BorderLayout

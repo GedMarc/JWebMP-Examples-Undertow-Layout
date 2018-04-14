@@ -1,6 +1,6 @@
-package za.co.mmagon.jwebswing.examples.undertow.layout.outerlayout;
+package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import za.co.mmagon.jwebswing.base.html.DivSimple;
+import com.jwebmp.base.html.DivSimple;
 
 public class OuterWestScreen extends DivSimple
 {
