@@ -6,28 +6,29 @@ import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
 import com.jwebmp.plugins.jquerylayout.layout.BorderLayout;
 
 @SuppressWarnings("unchecked")
-public class OuterScreen extends BorderLayout
+public class OuterScreen
+		extends BorderLayout
 {
 	public OuterScreen(ComponentHierarchyBase base)
 	{
 		super(base);
 
 		getNorth().getHeaders()
-				.add(new Div<>("North Header"));
+		          .add(new Div<>("North Header"));
 		getNorth().getContentDiv()
-				.add("North Content Div");
+		          .add("North Content Div");
 		getNorth().getFooters()
-				.add(new Div<>("North Footer"));
+		          .add(new Div<>("North Footer"));
 
 
 		getWest().getContentDiv()
-				.add(new OuterWestScreen());
+		         .add(new OuterWestScreen());
 		getWest().addHeader("Outer West Header");
 		getWest().addFooter("Outer West Footer");
 
 
 		getSouth().getContentDiv()
-				.add("Outer South Content");
+		          .add("Outer South Content");
 		getSouth().addHeader("Outer South Header");
 		getSouth().addFooter("Outer South Footer");
 		getSouth().addFooter("Outer South Footer 2");
@@ -35,7 +36,7 @@ public class OuterScreen extends BorderLayout
 
 
 		getEast().getContentDiv()
-				.add("Outer East Content");
+		         .add("Outer East Content");
 		getEast().addHeader("Outer East Header");
 		getEast().addFooter("Outer East Footer");
 
@@ -43,7 +44,7 @@ public class OuterScreen extends BorderLayout
 		innerContent.addStyle("height", "100%");
 		InnerScreen innerLayout = new InnerScreen(innerContent);
 		getCenter().getContentDiv()
-				.add(innerContent);
+		           .add(innerContent);
 	}
 
 }

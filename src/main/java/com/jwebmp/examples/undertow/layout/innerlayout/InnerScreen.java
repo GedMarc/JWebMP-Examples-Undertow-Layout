@@ -56,13 +56,13 @@ public class InnerScreen
 		getWest().addHeader("Layout JQUI Tabs Demo");
 
 		getSouth().addHeader("Inner South Header 1");
-		/*getSouth().addHeader("Inner South Header 2");
+		getSouth().addHeader("Inner South Header 2");
 		getSouth().addHeader("Inner South Header 3");
 		getSouth().addFooter("Inner South Footer 1");
 		getSouth().addFooter("Inner South Footer 2");
-		getSouth().addFooter("Inner South Footer 3");*/
+		getSouth().addFooter("Inner South Footer 3");
 
-		addTabsDemo();
+		//addTabsDemo();
 
 	}
 
