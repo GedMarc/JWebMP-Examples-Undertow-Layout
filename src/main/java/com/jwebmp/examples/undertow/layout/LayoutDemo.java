@@ -29,10 +29,8 @@ import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
 import za.co.mmagon.guiceinjection.GuiceContext;
 import za.co.mmagon.logger.LogFactory;
-import za.co.mmagon.logger.handlers.ConsoleSTDOutputHandler;
 
 import javax.servlet.ServletException;
-import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,7 +42,10 @@ public class LayoutDemo
 	public LayoutDemo()
 	{
 		super("Layout Demo 1.6");
-		OuterScreen screen = new OuterScreen(getBody());
+		OuterScreen screen = new OuterScreen();
+		screen.setFullScreen(true);
+		screen.setID("OuterScreen");
+		add(screen);
 		AngularPageConfigurator.setRequired(true);
 	}
 
@@ -57,15 +58,7 @@ public class LayoutDemo
 	 */
 	public static void main(String[] args) throws ServletException
 	{
-		Handler[] handles = Logger.getLogger("")
-		                          .getHandlers();
-		for (Handler handle : handles)
-		{
-			handle.setLevel(Level.FINE);
-		}
-		LogFactory.setDefaultLevel(Level.FINE);
-		Logger.getLogger("")
-		      .addHandler(new ConsoleSTDOutputHandler(true));
+		LogFactory.configureConsoleColourOutput(Level.FINE);
 		DeploymentInfo servletBuilder = Servlets.deployment()
 		                                        .setClassLoader(LayoutDemo.class.getClassLoader())
 		                                        .setContextPath("/")
@@ -78,7 +71,7 @@ public class LayoutDemo
 
 		HttpHandler jwebSwingHandler = manager.start();
 		Undertow server = Undertow.builder()
-		                          .addHttpListener(6002, "localhost")
+		                          .addHttpListener(6002, "0.0.0.0")
 		                          .setHandler(jwebSwingHandler)
 		                          .build();
 		server.start();

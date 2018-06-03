@@ -1,17 +1,15 @@
 package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import com.jwebmp.base.ComponentHierarchyBase;
 import com.jwebmp.base.html.Div;
 import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
-import com.jwebmp.plugins.jquerylayout.layout.BorderLayout;
+import com.jwebmp.plugins.jquerylayout.layout.components.BorderLayout;
 
-@SuppressWarnings("unchecked")
 public class OuterScreen
-		extends BorderLayout
+		extends BorderLayout<OuterScreen>
 {
-	public OuterScreen(ComponentHierarchyBase base)
+	public OuterScreen()
 	{
-		super(base);
+		super();
 
 		getNorth().getHeaders()
 		          .add(new Div<>("North Header"));
@@ -40,11 +38,10 @@ public class OuterScreen
 		getEast().addHeader("Outer East Header");
 		getEast().addFooter("Outer East Footer");
 
-		Div innerContent = new Div();
-		innerContent.addStyle("height", "100%");
-		InnerScreen innerLayout = new InnerScreen(innerContent);
+		InnerScreen innerLayout = new InnerScreen();
+		innerLayout.setFullScreen(true);
 		getCenter().getContentDiv()
-		           .add(innerContent);
+		           .add(innerLayout);
 	}
 
 }

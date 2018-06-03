@@ -17,8 +17,7 @@
 
 package com.jwebmp.examples.undertow.layout.innerlayout;
 
-import com.jwebmp.base.ComponentHierarchyBase;
-import com.jwebmp.plugins.jquerylayout.layout.BorderLayout;
+import com.jwebmp.plugins.jquerylayout.layout.components.BorderLayout;
 import com.jwebmp.plugins.jqueryui.tabs.JQUITabContent;
 import com.jwebmp.plugins.jqueryui.tabs.JQUITabs;
 
@@ -27,14 +26,12 @@ public class InnerScreen
 {
 	/**
 	 * Sets a component as a border layout container
-	 *
-	 * @param component
 	 */
-	public InnerScreen(ComponentHierarchyBase component)
+	public InnerScreen()
 	{
-		super(component);
+		super();
 		//ID needed for inner layout specs
-		component.setID("innerLayout");
+		setID("innerLayout");
 
 		getNorth().addHeader("Inner North Header 1");
 		getNorth().addHeader("Inner North Header 2");
@@ -62,7 +59,7 @@ public class InnerScreen
 		getSouth().addFooter("Inner South Footer 2");
 		getSouth().addFooter("Inner South Footer 3");
 
-		//addTabsDemo();
+		addTabsDemo();
 
 	}
 
@@ -76,8 +73,8 @@ public class InnerScreen
 		    .addTab("Tab 2", new JQUITabContent());
 		tabs.asMe()
 		    .addTab("Tab 3", new JQUITabContent());
-		getSouth().getContentDiv()
-		          .add(tabs);
+		getCenter().getContentDiv()
+		           .add(tabs);
 	}
 
 }
