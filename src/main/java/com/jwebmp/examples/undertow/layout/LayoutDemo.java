@@ -22,7 +22,7 @@ import com.jwebmp.base.ajax.AjaxCall;
 import com.jwebmp.base.ajax.AjaxResponse;
 import com.jwebmp.base.angular.AngularPageConfigurator;
 import com.jwebmp.examples.undertow.layout.outerlayout.OuterScreen;
-import com.jwebmp.guiceinjection.GuiceContext;
+import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
