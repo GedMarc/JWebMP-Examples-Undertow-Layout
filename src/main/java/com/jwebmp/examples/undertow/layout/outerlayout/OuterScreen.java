@@ -2,7 +2,7 @@ package com.jwebmp.examples.undertow.layout.outerlayout;
 
 import com.jwebmp.base.html.Div;
 import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
-import com.jwebmp.plugins.jquerylayout.layout.components.BorderLayout;
+import com.jwebmp.plugins.jqlayout.components.BorderLayout;
 
 public class OuterScreen
 		extends BorderLayout<OuterScreen>

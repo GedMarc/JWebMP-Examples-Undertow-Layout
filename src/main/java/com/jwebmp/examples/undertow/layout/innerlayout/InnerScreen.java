@@ -17,7 +17,7 @@
 
 package com.jwebmp.examples.undertow.layout.innerlayout;
 
-import com.jwebmp.plugins.jquerylayout.layout.components.BorderLayout;
+import com.jwebmp.plugins.jqlayout.components.BorderLayout;
 import com.jwebmp.plugins.jqueryui.tabs.JQUITabContent;
 import com.jwebmp.plugins.jqueryui.tabs.JQUITabs;
 
