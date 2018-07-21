@@ -1,6 +1,6 @@
 package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import com.jwebmp.base.html.DivSimple;
+import com.jwebmp.core.base.html.DivSimple;
 
 public class OuterWestScreen extends DivSimple
 {

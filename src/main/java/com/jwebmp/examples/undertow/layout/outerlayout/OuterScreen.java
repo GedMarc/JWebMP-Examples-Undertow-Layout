@@ -1,6 +1,6 @@
 package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import com.jwebmp.base.html.Div;
+import com.jwebmp.core.base.html.Div;
 import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
 import com.jwebmp.plugins.jqlayout.components.BorderLayout;
 

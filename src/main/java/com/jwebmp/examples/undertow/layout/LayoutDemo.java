@@ -17,10 +17,10 @@
 
 package com.jwebmp.examples.undertow.layout;
 
-import com.jwebmp.Page;
-import com.jwebmp.base.ajax.AjaxCall;
-import com.jwebmp.base.ajax.AjaxResponse;
-import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.base.ajax.AjaxCall;
+import com.jwebmp.core.base.ajax.AjaxResponse;
+import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.examples.undertow.layout.outerlayout.OuterScreen;
 import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
