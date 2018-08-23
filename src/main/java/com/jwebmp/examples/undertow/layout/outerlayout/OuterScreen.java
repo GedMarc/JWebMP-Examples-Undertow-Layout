@@ -1,7 +1,8 @@
 package com.jwebmp.examples.undertow.layout.outerlayout;
 
-import com.jwebmp.core.base.html.Div;
 import com.jwebmp.examples.undertow.layout.innerlayout.InnerScreen;
+import com.jwebmp.plugins.jqlayout.JQLayoutFooterDiv;
+import com.jwebmp.plugins.jqlayout.JQLayoutHeaderDiv;
 import com.jwebmp.plugins.jqlayout.components.BorderLayout;
 
 public class OuterScreen
@@ -12,18 +13,16 @@ public class OuterScreen
 		super();
 
 		getNorth().getHeaders()
-		          .add(new Div<>("North Header"));
+		          .add(new JQLayoutHeaderDiv<>("North Header"));
 		getNorth().getContentDiv()
 		          .add("North Content Div");
 		getNorth().getFooters()
-		          .add(new Div<>("North Footer"));
-
+		          .add(new JQLayoutFooterDiv<>("North Footer"));
 
 		getWest().getContentDiv()
 		         .add(new OuterWestScreen());
 		getWest().addHeader("Outer West Header");
 		getWest().addFooter("Outer West Footer");
-
 
 		getSouth().getContentDiv()
 		          .add("Outer South Content");
@@ -31,7 +30,6 @@ public class OuterScreen
 		getSouth().addFooter("Outer South Footer");
 		getSouth().addFooter("Outer South Footer 2");
 		getSouth().addFooter("Outer South Footer 3");
-
 
 		getEast().getContentDiv()
 		         .add("Outer East Content");
