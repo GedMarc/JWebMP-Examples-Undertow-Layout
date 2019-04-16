@@ -20,7 +20,6 @@ package com.jwebmp.examples.undertow.layout;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.base.ajax.AjaxCall;
 import com.jwebmp.core.base.ajax.AjaxResponse;
-import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.examples.undertow.layout.outerlayout.OuterScreen;
 import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
@@ -46,7 +45,6 @@ public class LayoutDemo
 		screen.setFullScreen(true);
 		screen.setID("OuterScreen");
 		add(screen);
-		AngularPageConfigurator.setRequired(true);
 	}
 
 	/**
