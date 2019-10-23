@@ -54,15 +54,15 @@
             <artifactId>jwebmp-jqui-layout</artifactId><type>jar</type>
             </dependency>
         <dependency>
-            <groupId>com.jwebmp.jpms.guicedee.servlets</groupId>
+            <groupId>com.guicedee.servlets</groupId>
             <artifactId>guiced-undertow</artifactId><type>jar</type>
             </dependency>
         <dependency>
-            <groupId>com.jwebmp.jpms.guicedee</groupId>
+            <groupId>com.guicedee</groupId>
             <artifactId>guiced-log-master</artifactId><type>jar</type>
             </dependency>
         <dependency>
-            <groupId>com.jwebmp.jpms.guicedee</groupId>
+            <groupId>com.guicedee</groupId>
             <artifactId>guiced-injection</artifactId><type>jar</type>
             </dependency>
         <dependency>
